@@ -37,7 +37,7 @@ class Dict(dict):
 
     def __setattr__(self, key, value):
         self[key] = value
-	
+
 def toDict(d):
     D = Dict()
     for k, v in d.items():
@@ -53,6 +53,4 @@ try:
 except ImportError:
 	pass
 
-
 configs = toDict(configs)
-print(configs.db.host)
